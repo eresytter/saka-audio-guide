@@ -1,0 +1,707 @@
+{
+  "timestamp": "2025-07-04T10:12:21.454456",
+  "settings": {
+    "format": "mp3",
+    "bitrate": 192,
+    "sample_rate": 24000,
+    "language": null
+  },
+  "files": [
+    {
+      "input": "tts/en/KASANGA_0_en.wav",
+      "output": "tts_lossless/en/KASANGA_0_en_optimized.mp3",
+      "original_size": 3176250,
+      "optimized_size": 659588,
+      "reduction": 79.23375049193231,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_11_Lumampah_Hning_Journey_into_Sil_2_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_11_Lumampah_Hning_Journey_into_Sil_2_en_optimized.mp3",
+      "original_size": 3039930,
+      "optimized_size": 670148,
+      "reduction": 77.95515028306573,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_12_Lila_Sagotra_Rejoicing_Together_3_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_12_Lila_Sagotra_Rejoicing_Together_3_en_optimized.mp3",
+      "original_size": 2342970,
+      "optimized_size": 500708,
+      "reduction": 78.62934651318626,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_13_Campuhan_Masa_A_Confluence_of_E_4_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_13_Campuhan_Masa_A_Confluence_of_E_4_en_optimized.mp3",
+      "original_size": 3022650,
+      "optimized_size": 659564,
+      "reduction": 78.17927977106181,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_14_Hangripta_Rum_Glow_of_Beauty_5_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_14_Hangripta_Rum_Glow_of_Beauty_5_en_optimized.mp3",
+      "original_size": 4437690,
+      "optimized_size": 956540,
+      "reduction": 78.44509192845828,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_15_Suka_Mageng_Great_Joy_6_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_15_Suka_Mageng_Great_Joy_6_en_optimized.mp3",
+      "original_size": 3462330,
+      "optimized_size": 751940,
+      "reduction": 78.28225501324253,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Artwork_16_Gargita_Mangening_Echoes_of_Sti_7_en.wav",
+      "output": "tts_lossless/en/Zone_1__Artwork_16_Gargita_Mangening_Echoes_of_Sti_7_en_optimized.mp3",
+      "original_size": 3362490,
+      "optimized_size": 687332,
+      "reduction": 79.55883883669543,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_1__Melasti_Tides_of_Purification_1_en.wav",
+      "output": "tts_lossless/en/Zone_1__Melasti_Tides_of_Purification_1_en_optimized.mp3",
+      "original_size": 4347450,
+      "optimized_size": 920756,
+      "reduction": 78.82077999746978,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_21__Murwa_Kala_Back_in_the_Days_9_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_21__Murwa_Kala_Back_in_the_Days_9_en_optimized.mp3",
+      "original_size": 7248570,
+      "optimized_size": 1582508,
+      "reduction": 78.16799727394506,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_221__Kaki_Patuk_Male_Ancestor_11_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_221__Kaki_Patuk_Male_Ancestor_11_en_optimized.mp3",
+      "original_size": 2506170,
+      "optimized_size": 537068,
+      "reduction": 78.57016882334399,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_222__Kala_Bang_Red_Giant_12_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_222__Kala_Bang_Red_Giant_12_en_optimized.mp3",
+      "original_size": 3466170,
+      "optimized_size": 750308,
+      "reduction": 78.35339870808414,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_223__Kala_Sungsang_Inverted_Giant_13_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_223__Kala_Sungsang_Inverted_Giant_13_en_optimized.mp3",
+      "original_size": 2191290,
+      "optimized_size": 474236,
+      "reduction": 78.35813607509732,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_224__Jabang_Katuka_Son_of_Bhima_14_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_224__Jabang_Katuka_Son_of_Bhima_14_en_optimized.mp3",
+      "original_size": 3299130,
+      "optimized_size": 719756,
+      "reduction": 78.18346048806806,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_225__Niwatakawaca_The_Ogre-King_Niv_15_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_225__Niwatakawaca_The_Ogre-King_Niv_15_en_optimized.mp3",
+      "original_size": 2959290,
+      "optimized_size": 681260,
+      "reduction": 76.97893751541754,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_22__Sarwa_Rupa_In_Many_Forms_10_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_22__Sarwa_Rupa_In_Many_Forms_10_en_optimized.mp3",
+      "original_size": 2414010,
+      "optimized_size": 522380,
+      "reduction": 78.36048732192494,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_23__Mandala_Matra_Cosmic_Mandala_16_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_23__Mandala_Matra_Cosmic_Mandala_16_en_optimized.mp3",
+      "original_size": 6067770,
+      "optimized_size": 1336652,
+      "reduction": 77.97128104723812,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_2410__Child_of_The_Divine_Challenge_27_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_2410__Child_of_The_Divine_Challenge_27_en_optimized.mp3",
+      "original_size": 5082810,
+      "optimized_size": 1109372,
+      "reduction": 78.17404152427497,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_241__Guardians_of_the_Ethereal_Bali_18_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_241__Guardians_of_the_Ethereal_Bali_18_en_optimized.mp3",
+      "original_size": 2728890,
+      "optimized_size": 608852,
+      "reduction": 77.68865729289199,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_242__The_Abduction_of_Sita_Sita_Kap_19_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_242__The_Abduction_of_Sita_Sita_Kap_19_en_optimized.mp3",
+      "original_size": 3124410,
+      "optimized_size": 698324,
+      "reduction": 77.64941220902506,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_243__The_Mighty_Heroine_Shikhandi_K_20_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_243__The_Mighty_Heroine_Shikhandi_K_20_en_optimized.mp3",
+      "original_size": 2327610,
+      "optimized_size": 498524,
+      "reduction": 78.582150789866,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_244__Goddess_Sarasvati_Dewi_Saraswa_21_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_244__Goddess_Sarasvati_Dewi_Saraswa_21_en_optimized.mp3",
+      "original_size": 2938170,
+      "optimized_size": 635348,
+      "reduction": 78.37606401263372,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_245__The_End_of_Mahishasura_Mahesas_22_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_245__The_End_of_Mahishasura_Mahesas_22_en_optimized.mp3",
+      "original_size": 2375610,
+      "optimized_size": 502004,
+      "reduction": 78.8684169539613,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_246__Kumbhakarna_Besieged_by_the_Mo_23_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_246__Kumbhakarna_Besieged_by_the_Mo_23_en_optimized.mp3",
+      "original_size": 4305210,
+      "optimized_size": 950612,
+      "reduction": 77.9194975390283,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_247__The_Fury_of_Ravana_and_Vimana__24_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_247__The_Fury_of_Ravana_and_Vimana__24_en_optimized.mp3",
+      "original_size": 4512570,
+      "optimized_size": 1024916,
+      "reduction": 77.28753238176914,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_248__The_Cunning_Cranes_Deception_P_25_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_248__The_Cunning_Cranes_Deception_P_25_en_optimized.mp3",
+      "original_size": 4001850,
+      "optimized_size": 874556,
+      "reduction": 78.14620737908717,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_249__The_Demise_of_Hiranyakashipu_H_26_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_249__The_Demise_of_Hiranyakashipu_H_26_en_optimized.mp3",
+      "original_size": 4892730,
+      "optimized_size": 1061828,
+      "reduction": 78.29784190012529,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2_Artwork_24__Ripantaraning_Nandhi_Kala_Among_17_en.wav",
+      "output": "tts_lossless/en/Zone_2_Artwork_24__Ripantaraning_Nandhi_Kala_Among_17_en_optimized.mp3",
+      "original_size": 3456570,
+      "optimized_size": 750956,
+      "reduction": 78.27453226753688,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_2__Tawur_Kasanga_Restoring_Balance_8_en.wav",
+      "output": "tts_lossless/en/Zone_2__Tawur_Kasanga_Restoring_Balance_8_en_optimized.mp3",
+      "original_size": 4326330,
+      "optimized_size": 925748,
+      "reduction": 78.60200215887369,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_-_Nyepi_Quiet_Reverence_28_en.wav",
+      "output": "tts_lossless/en/Zone_3_-_Nyepi_Quiet_Reverence_28_en_optimized.mp3",
+      "original_size": 2081850,
+      "optimized_size": 447356,
+      "reduction": 78.51161226793477,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_3110_40_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_3110_40_en_optimized.mp3",
+      "original_size": 5906490,
+      "optimized_size": 1277300,
+      "reduction": 78.37463535873252,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_311_-_Chandra_Sangkala_30_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_311_-_Chandra_Sangkala_30_en_optimized.mp3",
+      "original_size": 4969530,
+      "optimized_size": 1086092,
+      "reduction": 78.14497548057865,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_312_31_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_312_31_en_optimized.mp3",
+      "original_size": 2675130,
+      "optimized_size": 590972,
+      "reduction": 77.9086623827627,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_313_32_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_313_32_en_optimized.mp3",
+      "original_size": 1402170,
+      "optimized_size": 301892,
+      "reduction": 78.4696577447813,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_314-1_33_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_314-1_33_en_optimized.mp3",
+      "original_size": 4182330,
+      "optimized_size": 904220,
+      "reduction": 78.37999392683027,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_314-2_34_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_314-2_34_en_optimized.mp3",
+      "original_size": 3829050,
+      "optimized_size": 852836,
+      "reduction": 77.72721693370418,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_315_35_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_315_35_en_optimized.mp3",
+      "original_size": 2041530,
+      "optimized_size": 433244,
+      "reduction": 78.77846517072979,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_316_36_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_316_36_en_optimized.mp3",
+      "original_size": 2389050,
+      "optimized_size": 504140,
+      "reduction": 78.89788828195307,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_317_37_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_317_37_en_optimized.mp3",
+      "original_size": 2367930,
+      "optimized_size": 515012,
+      "reduction": 78.25053950074538,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_318_38_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_318_38_en_optimized.mp3",
+      "original_size": 1430970,
+      "optimized_size": 304364,
+      "reduction": 78.73023194057178,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_319_39_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_319_39_en_optimized.mp3",
+      "original_size": 1680570,
+      "optimized_size": 353324,
+      "reduction": 78.97594268611246,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_3_Artwork_31_-_Cetra_Masa_The_Ninth_Month_29_en.wav",
+      "output": "tts_lossless/en/Zone_3_Artwork_31_-_Cetra_Masa_The_Ninth_Month_29_en_optimized.mp3",
+      "original_size": 4835130,
+      "optimized_size": 1048052,
+      "reduction": 78.3242229267879,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_4_-_Ngembak_Geni_Embracing_Renewal_41_en.wav",
+      "output": "tts_lossless/en/Zone_4_-_Ngembak_Geni_Embracing_Renewal_41_en_optimized.mp3",
+      "original_size": 1839930,
+      "optimized_size": 388700,
+      "reduction": 78.87419630094624,
+      "success": true
+    },
+    {
+      "input": "tts/en/Zone_4_Artwork_41_-_Damuh_Aksara_42_en.wav",
+      "output": "tts_lossless/en/Zone_4_Artwork_41_-_Damuh_Aksara_42_en_optimized.mp3",
+      "original_size": 5052090,
+      "optimized_size": 1073156,
+      "reduction": 78.75817730879695,
+      "success": true
+    },
+    {
+      "input": "tts/ja/KASANGA_0_ja.wav",
+      "output": "tts_lossless/ja/KASANGA_0_ja_optimized.mp3",
+      "original_size": 3917370,
+      "optimized_size": 801236,
+      "reduction": 79.54658354967746,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_11_Lumampah_Hning_Journey_into_Sil_2_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_11_Lumampah_Hning_Journey_into_Sil_2_ja_optimized.mp3",
+      "original_size": 3940410,
+      "optimized_size": 832148,
+      "reduction": 78.88168997642377,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_12_Lila_Sagotra_Rejoicing_Together_3_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_12_Lila_Sagotra_Rejoicing_Together_3_ja_optimized.mp3",
+      "original_size": 3302970,
+      "optimized_size": 696980,
+      "reduction": 78.89838539254065,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_13_Campuhan_Masa_A_Confluence_of_E_4_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_13_Campuhan_Masa_A_Confluence_of_E_4_ja_optimized.mp3",
+      "original_size": 3830970,
+      "optimized_size": 808940,
+      "reduction": 78.88419904097395,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_14_Hangripta_Rum_Glow_of_Beauty_5_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_14_Hangripta_Rum_Glow_of_Beauty_5_ja_optimized.mp3",
+      "original_size": 5451450,
+      "optimized_size": 1135340,
+      "reduction": 79.17361435948234,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_15_Suka_Mageng_Great_Joy_6_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_15_Suka_Mageng_Great_Joy_6_ja_optimized.mp3",
+      "original_size": 4410810,
+      "optimized_size": 927884,
+      "reduction": 78.96341034866612,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Artwork_16_Gargita_Mangening_Echoes_of_Sti_7_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Artwork_16_Gargita_Mangening_Echoes_of_Sti_7_ja_optimized.mp3",
+      "original_size": 3948090,
+      "optimized_size": 820364,
+      "reduction": 79.2212436899868,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_1__Melasti_Tides_of_Purification_1_ja.wav",
+      "output": "tts_lossless/ja/Zone_1__Melasti_Tides_of_Purification_1_ja_optimized.mp3",
+      "original_size": 5253690,
+      "optimized_size": 1133324,
+      "reduction": 78.42803819791423,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_21__Murwa_Kala_Back_in_the_Days_9_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_21__Murwa_Kala_Back_in_the_Days_9_ja_optimized.mp3",
+      "original_size": 8579130,
+      "optimized_size": 1837100,
+      "reduction": 78.58640678017468,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_221__Kaki_Patuk_Male_Ancestor_11_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_221__Kaki_Patuk_Male_Ancestor_11_ja_optimized.mp3",
+      "original_size": 3423930,
+      "optimized_size": 755180,
+      "reduction": 77.9440584357741,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_222__Kala_Bang_Red_Giant_12_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_222__Kala_Bang_Red_Giant_12_ja_optimized.mp3",
+      "original_size": 4850490,
+      "optimized_size": 995588,
+      "reduction": 79.47448608284937,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_223__Kala_Sungsang_Inverted_Giant_13_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_223__Kala_Sungsang_Inverted_Giant_13_ja_optimized.mp3",
+      "original_size": 3022650,
+      "optimized_size": 654692,
+      "reduction": 78.34046283889964,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_224__Jabang_Katuka_Son_of_Bhima_14_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_224__Jabang_Katuka_Son_of_Bhima_14_ja_optimized.mp3",
+      "original_size": 5290170,
+      "optimized_size": 1160036,
+      "reduction": 78.07185780419155,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_225__Niwatakawaca_The_Ogre-King_Niv_15_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_225__Niwatakawaca_The_Ogre-King_Niv_15_ja_optimized.mp3",
+      "original_size": 4188090,
+      "optimized_size": 886364,
+      "reduction": 78.83608040896924,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_22__Sarwa_Rupa_In_Many_Forms_10_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_22__Sarwa_Rupa_In_Many_Forms_10_ja_optimized.mp3",
+      "original_size": 3291450,
+      "optimized_size": 681956,
+      "reduction": 79.28098558386122,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_23__Mandala_Matra_Cosmic_Mandala_16_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_23__Mandala_Matra_Cosmic_Mandala_16_ja_optimized.mp3",
+      "original_size": 7390650,
+      "optimized_size": 1570652,
+      "reduction": 78.74812093658879,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_2410__Child_of_The_Divine_Challenge_27_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_2410__Child_of_The_Divine_Challenge_27_ja_optimized.mp3",
+      "original_size": 6522810,
+      "optimized_size": 1376012,
+      "reduction": 78.90461319584658,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_241__Guardians_of_the_Ethereal_Bali_18_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_241__Guardians_of_the_Ethereal_Bali_18_ja_optimized.mp3",
+      "original_size": 4005690,
+      "optimized_size": 820316,
+      "reduction": 79.52123104883303,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_242__The_Abduction_of_Sita_Sita_Kap_19_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_242__The_Abduction_of_Sita_Sita_Kap_19_ja_optimized.mp3",
+      "original_size": 4961850,
+      "optimized_size": 1079708,
+      "reduction": 78.23980974838014,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_243__The_Mighty_Heroine_Shikhandi_K_20_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_243__The_Mighty_Heroine_Shikhandi_K_20_ja_optimized.mp3",
+      "original_size": 3343290,
+      "optimized_size": 705500,
+      "reduction": 78.89803157967152,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_244__Goddess_Sarasvati_Dewi_Saraswa_21_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_244__Goddess_Sarasvati_Dewi_Saraswa_21_ja_optimized.mp3",
+      "original_size": 4216890,
+      "optimized_size": 883532,
+      "reduction": 79.04778165899513,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_245__The_End_of_Mahishasura_Mahesas_22_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_245__The_End_of_Mahishasura_Mahesas_22_ja_optimized.mp3",
+      "original_size": 3212730,
+      "optimized_size": 670556,
+      "reduction": 79.12815580518749,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_246__Kumbhakarna_Besieged_by_the_Mo_23_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_246__Kumbhakarna_Besieged_by_the_Mo_23_ja_optimized.mp3",
+      "original_size": 5766330,
+      "optimized_size": 1175516,
+      "reduction": 79.61413932258473,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_247__The_Fury_of_Ravana_and_Vimana__24_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_247__The_Fury_of_Ravana_and_Vimana__24_ja_optimized.mp3",
+      "original_size": 6559290,
+      "optimized_size": 1332044,
+      "reduction": 79.69225327741265,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_248__The_Cunning_Cranes_Deception_P_25_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_248__The_Cunning_Cranes_Deception_P_25_ja_optimized.mp3",
+      "original_size": 5676090,
+      "optimized_size": 1196852,
+      "reduction": 78.91414688632491,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_249__The_Demise_of_Hiranyakashipu_H_26_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_249__The_Demise_of_Hiranyakashipu_H_26_ja_optimized.mp3",
+      "original_size": 5990970,
+      "optimized_size": 1315268,
+      "reduction": 78.0458256342462,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2_Artwork_24__Ripantaraning_Nandhi_Kala_Among_17_ja.wav",
+      "output": "tts_lossless/ja/Zone_2_Artwork_24__Ripantaraning_Nandhi_Kala_Among_17_ja_optimized.mp3",
+      "original_size": 4430010,
+      "optimized_size": 912044,
+      "reduction": 79.41214579651061,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_2__Tawur_Kasanga_Restoring_Balance_8_ja.wav",
+      "output": "tts_lossless/ja/Zone_2__Tawur_Kasanga_Restoring_Balance_8_ja_optimized.mp3",
+      "original_size": 5537850,
+      "optimized_size": 1211108,
+      "reduction": 78.13035744919057,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_-_Nyepi_Quiet_Reverence_28_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_-_Nyepi_Quiet_Reverence_28_ja_optimized.mp3",
+      "original_size": 3228090,
+      "optimized_size": 660332,
+      "reduction": 79.54418866884133,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_3110_40_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_3110_40_ja_optimized.mp3",
+      "original_size": 7148730,
+      "optimized_size": 1572212,
+      "reduction": 78.00711455041665,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_311_-_Chandra_Sangkala_30_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_311_-_Chandra_Sangkala_30_ja_optimized.mp3",
+      "original_size": 5921850,
+      "optimized_size": 1215980,
+      "reduction": 79.46621410538937,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_312_31_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_312_31_ja_optimized.mp3",
+      "original_size": 1937850,
+      "optimized_size": 390524,
+      "reduction": 79.84756302087365,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_313_32_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_313_32_ja_optimized.mp3",
+      "original_size": 952890,
+      "optimized_size": 199916,
+      "reduction": 79.0200337919382,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_314-1_33_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_314-1_33_ja_optimized.mp3",
+      "original_size": 5614650,
+      "optimized_size": 1199876,
+      "reduction": 78.62954948215828,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_314-2_34_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_314-2_34_ja_optimized.mp3",
+      "original_size": 4837050,
+      "optimized_size": 1005068,
+      "reduction": 79.22146763006378,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_315_35_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_315_35_ja_optimized.mp3",
+      "original_size": 2392890,
+      "optimized_size": 495332,
+      "reduction": 79.29984244992457,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_316_36_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_316_36_ja_optimized.mp3",
+      "original_size": 2978490,
+      "optimized_size": 635204,
+      "reduction": 78.67362321176167,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_317_37_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_317_37_ja_optimized.mp3",
+      "original_size": 3070650,
+      "optimized_size": 665348,
+      "reduction": 78.33201439434647,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_318_38_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_318_38_ja_optimized.mp3",
+      "original_size": 1878330,
+      "optimized_size": 367964,
+      "reduction": 80.41004509324773,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_319_39_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_319_39_ja_optimized.mp3",
+      "original_size": 2091450,
+      "optimized_size": 429020,
+      "reduction": 79.48695880848216,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_3_Artwork_31_-_Cetra_Masa_The_Ninth_Month_29_ja.wav",
+      "output": "tts_lossless/ja/Zone_3_Artwork_31_-_Cetra_Masa_The_Ninth_Month_29_ja_optimized.mp3",
+      "original_size": 6476730,
+      "optimized_size": 1361636,
+      "reduction": 78.9764896792054,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_4_-_Ngembak_Geni_Embracing_Renewal_41_ja.wav",
+      "output": "tts_lossless/ja/Zone_4_-_Ngembak_Geni_Embracing_Renewal_41_ja_optimized.mp3",
+      "original_size": 2529210,
+      "optimized_size": 525668,
+      "reduction": 79.21611886715615,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Zone_4_Artwork_41_-_Damuh_Aksara_42_ja.wav",
+      "output": "tts_lossless/ja/Zone_4_Artwork_41_-_Damuh_Aksara_42_ja_optimized.mp3",
+      "original_size": 7217850,
+      "optimized_size": 1573580,
+      "reduction": 78.19877110219802,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_files": 86,
+    "successful": 86,
+    "failed": 0,
+    "total_original_size": 340693500,
+    "total_optimized_size": 72806344,
+    "total_reduction": 78.62995801211353
+  }
+}
