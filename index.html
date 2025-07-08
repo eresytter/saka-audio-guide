@@ -1,0 +1,414 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Museum Audio Guide</title><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"><style>/* Reset and base styles */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --text-color: #333;
+    --subtitle-color: #666;
+    --background-color: #f5f5f5;
+    --progress-color: #667eea;
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* Layout-specific defaults */
+    --header-background: #ffffff;
+    --header-text-color: #333;
+    --header-border-color: #e0e0e0;
+    --footer-background: #ffffff;
+    --footer-text-color: #333;
+    --footer-border-color: #e0e0e0;
+    --list-background: #ffffff;
+    --list-item-hover: #f8f9fa;
+    --list-item-active: #e3f2fd;
+    --list-border-color: #f0f0f0;
+    --button-hover-color: #764ba2;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color) !important;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.audio-guide {
+    width: 100%;
+    background: var(--background-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sticky header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--header-background);
+    color: var(--header-text-color);
+    border-bottom: 1px solid var(--header-border-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Scrollable list container */
+.list-container {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0; /* Important for flex scrolling */
+    background: var(--list-background);
+}
+
+/* Sticky player controls */
+.player-controls {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    background: var(--footer-background);
+    color: var(--footer-text-color);
+    border-top: 1px solid var(--footer-border-color);
+    box-shadow: 0 -2px 10px var(--shadow-color);
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+/* Header component styles */
+.current-track-header {
+    padding: 20px;
+    background: var(--header-background);
+    color: var(--header-text-color);
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.current-track-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.current-track-image .track-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.current-track-image .fallback-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.track-details {
+    flex: 1;
+    text-align: left;
+}
+
+.current-track-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--header-text-color);
+    margin-bottom: 4px;
+}
+
+.current-track-subtitle {
+    font-size: 14px;
+    color: var(--subtitle-color);
+}
+
+/* Progress bar in header */
+.header-progress {
+    margin-top: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 3px;
+    background: var(--header-border-color);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--progress-color);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--subtitle-color);
+}
+
+/* Audio list component styles */
+.audio-list {
+    padding: 0;
+    background: var(--list-background);
+}
+
+.audio-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--list-border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background: var(--list-background);
+    color: var(--text-color);
+}
+
+.audio-item:hover {
+    background-color: var(--list-item-hover);
+}
+
+.audio-item.active {
+    background-color: var(--list-item-active);
+    border-left: 4px solid var(--primary-color);
+}
+
+.audio-item.completed {
+    opacity: 0.7;
+}
+
+.audio-item.completed .audio-thumbnail {
+    background: #4caf50;
+}
+
+.audio-item.completed .audio-thumbnail .thumbnail-fallback {
+    background: #4caf50;
+}
+
+.audio-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    margin-right: 12px;
+    background: var(--gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.audio-thumbnail .track-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.audio-thumbnail .thumbnail-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.audio-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.audio-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.audio-subtitle {
+    font-size: 12px;
+    color: var(--subtitle-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.audio-duration {
+    font-size: 12px;
+    color: var(--subtitle-color);
+    margin-left: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.completion-badge {
+    background: var(--accent-color);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+.playing-indicator {
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 8px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.playing-indicator.playing {
+    animation: pulse 1s infinite;
+}
+
+/* Media player component styles */
+.media-player {
+    padding: 16px 20px;
+    background: var(--footer-background);
+    color: var(--footer-text-color);
+}
+
+.main-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    width: 44px;
+    height: 44px;
+}
+
+.control-btn:hover {
+    background-color: var(--list-item-hover);
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.play-pause-btn {
+    width: 56px;
+    height: 56px;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.play-pause-btn:hover {
+    background: var(--button-hover-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.material-icons {
+    font-size: 24px;
+}
+
+.play-pause-btn .material-icons {
+    font-size: 32px;
+}
+
+/* Disabled state */
+.player-controls.disabled .control-btn {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Hide audio element */
+audio {
+    display: none;
+}
+
+</style></head><body><div class="audio-guide"></div><script>(()=>{"use strict";class t{constructor(){this.playlistData=null,this.theme=null}async loadPlaylist(){try{return this.playlistData=JSON.parse('{\n  "playlist_info": {\n    "name": "Museum Audio Guide",\n    "description": "Interactive audio guide for museum exhibits",\n    "theme": {\n      "primary_color": "#ff6b6b",\n      "secondary_color": "#4ecdc4",\n      "accent_color": "#45b7d1",\n      "text_color": "#2c3e50",\n      "subtitle_color": "#7f8c8d",\n      "background_color": "#f8f9fa",\n      "progress_color": "#ff6b6b",\n      "gradient": "linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%)",\n      "header_background": "#ffffff",\n      "header_text_color": "#2c3e50",\n      "header_border_color": "#e0e0e0",\n      "footer_background": "#ffffff",\n      "footer_text_color": "#2c3e50",\n      "footer_border_color": "#e0e0e0",\n      "list_background": "#ffffff",\n      "list_item_hover": "#f8f9fa",\n      "list_item_active": "#e3f2fd",\n      "list_border_color": "#f0f0f0",\n      "button_hover_color": "#ff5252",\n      "shadow_color": "rgba(0,0,0,0.1)"\n    }\n  },\n  "tracks": [\n    {\n      "id": 1,\n      "playlist_name": "Ancient Egyptian Art",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",\n      "thumbnail_url": "",\n      "description": "Explore the mysteries of ancient Egyptian civilization through their remarkable artworks and hieroglyphics."\n    },\n    {\n      "id": 2,\n      "playlist_name": "Renaissance Masters",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a",\n      "thumbnail_url": "",\n      "description": "Discover the revolutionary techniques and masterpieces of Renaissance artists like Leonardo da Vinci and Michelangelo."\n    },\n    {\n      "id": 3,\n      "playlist_name": "Modern Sculptures",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",\n      "thumbnail_url": "",\n      "description": "Experience the bold expressions and innovative forms of contemporary sculptural art."\n    },\n    {\n      "id": 4,\n      "playlist_name": "Impressionist Paintings",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",\n      "thumbnail_url": "",\n      "description": "Immerse yourself in the light and color of Impressionist masterpieces from Monet, Renoir, and Degas."\n    },\n    {\n      "id": 5,\n      "playlist_name": "Asian Ceramics",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a",\n      "thumbnail_url": "https://fastly.picsum.photos/id/730/200/200.jpg?hmac=wK_2ZX79XZRP1wVJ-dW_r-OkOjiz1kK8eHIyTw2Lr6s",\n      "description": "Appreciate the delicate craftsmanship and cultural significance of traditional Asian ceramic art."\n    },\n    {\n      "id": 6,\n      "playlist_name": "African Masks",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",\n      "thumbnail_url": "https://fastly.picsum.photos/id/215/200/200.jpg?hmac=3tSx9-cokJ9mRzxZ5jFOb7f6SKjA29i-Nh3-iW2O-MU",\n      "description": "Understand the spiritual and cultural importance of traditional African mask-making traditions."\n    },\n    {\n      "id": 7,\n      "playlist_name": "Medieval Manuscripts",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",\n      "thumbnail_url": "https://fastly.picsum.photos/id/81/200/200.jpg?hmac=dFNEVF-qbegjxydMvtTOtbJGZL9ofrpsTh6FA-FTtkI",\n      "description": "Explore the intricate illuminated manuscripts and calligraphy of the medieval period."\n    },\n    {\n      "id": 8,\n      "playlist_name": "Contemporary Photography",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a",\n      "thumbnail_url": "",\n      "description": "View the world through the lens of modern photographers capturing today\'s society and landscapes."\n    },\n    {\n      "id": 9,\n      "playlist_name": "Ancient Greek Pottery",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",\n      "thumbnail_url": "https://fastly.picsum.photos/id/100/200/200.jpg?hmac=1a2b3c4d5e6f7g8h9i0j",\n      "description": "Discover the stories and myths depicted on ancient Greek pottery and vases."\n    },\n    {\n      "id": 10,\n      "playlist_name": "Baroque Architecture",\n      "song_url": "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",\n      "thumbnail_url": "https://fastly.picsum.photos/id/200/200/200.jpg?hmac=1a2b3c4d5e6f7g8h9i0j",\n      "description": "Marvel at the grandeur and ornate details of Baroque architectural masterpieces."\n    }\n  ]\n}\n'),this.theme=this.playlistData.playlist_info.theme,this.processTrackThumbnails(),console.log("Playlist loaded successfully:",this.playlistData.playlist_info.name),this.playlistData}catch(t){return console.error("Error loading playlist:",t),this.getFallbackPlaylist()}}processTrackThumbnails(){this.playlistData&&this.playlistData.tracks&&this.playlistData.tracks.forEach(t=>{t.thumbnail_url&&""!==t.thumbnail_url.trim()||(t.thumbnail_initials=this.generateInitials(t.playlist_name))})}generateInitials(t){if(!t)return"MG";const e=t.trim().split(/\s+/);return 1===e.length?e[0].substring(0,2).toUpperCase():e.slice(0,2).map(t=>t.charAt(0)).join("").toUpperCase()}getTracks(){return this.playlistData?.tracks||[]}getPlaylistInfo(){return this.playlistData?.playlist_info||null}getTheme(){return this.theme}applyTheme(){if(!this.theme)return void console.warn("No theme data available to apply");console.log("Applying theme:",this.theme);const t=t=>!!t&&(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(t)||t.startsWith("rgb")||t.startsWith("rgba")||t.startsWith("hsl")||t.startsWith("linear-gradient")||t.startsWith("radial-gradient")),e=document.documentElement;t(this.theme.primary_color)?e.style.setProperty("--primary-color",this.theme.primary_color):console.warn("Invalid primary_color:",this.theme.primary_color),t(this.theme.secondary_color)&&e.style.setProperty("--secondary-color",this.theme.secondary_color),t(this.theme.background_color)?(e.style.setProperty("--background-color",this.theme.background_color),document.body.style.backgroundColor=this.theme.background_color,console.log("Setting body background to:",this.theme.background_color)):console.warn("Invalid background_color:",this.theme.background_color),t(this.theme.accent_color)&&e.style.setProperty("--accent-color",this.theme.accent_color),t(this.theme.text_color)&&e.style.setProperty("--text-color",this.theme.text_color),t(this.theme.subtitle_color)&&e.style.setProperty("--subtitle-color",this.theme.subtitle_color),t(this.theme.progress_color)&&e.style.setProperty("--progress-color",this.theme.progress_color),this.theme.gradient&&e.style.setProperty("--gradient",this.theme.gradient),t(this.theme.header_background)&&e.style.setProperty("--header-background",this.theme.header_background),t(this.theme.header_text_color)&&e.style.setProperty("--header-text-color",this.theme.header_text_color),t(this.theme.header_border_color)&&e.style.setProperty("--header-border-color",this.theme.header_border_color),t(this.theme.footer_background)&&e.style.setProperty("--footer-background",this.theme.footer_background),t(this.theme.footer_text_color)&&e.style.setProperty("--footer-text-color",this.theme.footer_text_color),t(this.theme.footer_border_color)&&e.style.setProperty("--footer-border-color",this.theme.footer_border_color),t(this.theme.list_background)&&e.style.setProperty("--list-background",this.theme.list_background),t(this.theme.list_item_hover)&&e.style.setProperty("--list-item-hover",this.theme.list_item_hover),t(this.theme.list_item_active)&&e.style.setProperty("--list-item-active",this.theme.list_item_active),t(this.theme.list_border_color)&&e.style.setProperty("--list-border-color",this.theme.list_border_color),t(this.theme.button_hover_color)&&e.style.setProperty("--button-hover-color",this.theme.button_hover_color),this.theme.shadow_color&&e.style.setProperty("--shadow-color",this.theme.shadow_color),document.body.style.color=this.theme.text_color,setTimeout(()=>{document.body.style.display="none",document.body.offsetHeight,document.body.style.display="",console.log("Applied CSS variables:"),console.log("--primary-color:",getComputedStyle(e).getPropertyValue("--primary-color")),console.log("--secondary-color:",getComputedStyle(e).getPropertyValue("--secondary-color")),console.log("--background-color:",getComputedStyle(e).getPropertyValue("--background-color")),console.log("--header-background:",getComputedStyle(e).getPropertyValue("--header-background")),console.log("--footer-background:",getComputedStyle(e).getPropertyValue("--footer-background")),console.log("--list-background:",getComputedStyle(e).getPropertyValue("--list-background")),console.log("Body background:",getComputedStyle(document.body).backgroundColor),console.log("Body style background:",document.body.style.backgroundColor)},100),console.log("Theme applied successfully")}getFallbackPlaylist(){return{playlist_info:{name:"Museum Audio Guide",description:"Default audio guide",theme:{primary_color:"#667eea",secondary_color:"#764ba2",accent_color:"#f093fb",text_color:"#333",subtitle_color:"#666",background_color:"#f5f5f5",progress_color:"#667eea",gradient:"linear-gradient(135deg, #667eea 0%, #764ba2 100%)"}},tracks:[{id:1,playlist_name:"Museum Guide",song_url:"https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3",thumbnail_url:"",thumbnail_initials:"MG",description:"Default museum audio guide track"}]}}getTrackById(t){return this.getTracks().find(e=>e.id===t)||null}getTrackCount(){return this.getTracks().length}}const e={formatTime:t=>isNaN(t)?"0:00":`${Math.floor(t/60)}:${Math.floor(t%60).toString().padStart(2,"0")}`,createElement(t,e,a){const i=document.createElement(t);return e&&(i.className=e),a&&(i.innerHTML=a),i}},a=class{constructor(){this.tracks=[],this.currentTrack=1,this.isPlaying=!1,this.isMuted=!1,this.completedTracks=new Set,this.currentTime=0,this.playlistManager=new t,this.initializeTracks(),this.loadSavedState()}async initializeTracks(){try{const t=await this.playlistManager.loadPlaylist();this.tracks=t.tracks.map(t=>{const e={id:t.id,title:t.playlist_name,description:t.description,url:t.song_url,duration:0,icon:t.thumbnail_url?t.thumbnail_url:t.thumbnail_initials,thumbnail_url:t.thumbnail_url,thumbnail_initials:t.thumbnail_initials};return console.log("Processed track:",e.title,"thumbnail_url:",e.thumbnail_url),e}),console.log(`Loaded ${this.tracks.length} tracks from playlist`)}catch(t){console.error("Failed to load playlist, using fallback:",t),this.initializeFallbackTracks()}}initializeFallbackTracks(){const t=["https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3","https://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a","https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"];for(let e=1;e<=10;e++)this.tracks.push({id:e,title:`Part ${e} - Museum Display`,description:`Museum Audio Guide - Display ${e}`,url:t[e%t.length],duration:0,icon:e.toString()})}getCurrentTrack(){return this.tracks[this.currentTrack-1]}setCurrentTrack(t){this.currentTrack=t,this.saveState()}markTrackCompleted(t){this.completedTracks.add(t),this.saveState()}isTrackCompleted(t){return this.completedTracks.has(t)}clearSavedState(){localStorage.removeItem("museumAudioGuideTrack"),localStorage.removeItem("museumAudioGuideCompleted"),localStorage.removeItem("museumAudioGuideDurations"),this.completedTracks.clear(),console.log("Cleared all saved state")}setPlaying(t){this.isPlaying=t}setCurrentTime(t){this.currentTime=t}setDuration(t,e){const a=this.tracks.find(e=>e.id===t);a&&(a.duration=e,this.saveState())}setMuted(t){this.isMuted=t}saveState(){localStorage.setItem("museumAudioGuideTrack",this.currentTrack),localStorage.setItem("museumAudioGuideCompleted",JSON.stringify([...this.completedTracks]));const t={};this.tracks.forEach(e=>{e.duration>0&&(t[e.id]=e.duration)}),localStorage.setItem("museumAudioGuideDurations",JSON.stringify(t))}loadSavedState(){const t=localStorage.getItem("museumAudioGuideTrack");t&&t>=1&&t<=43&&(this.currentTrack=parseInt(t));const e=localStorage.getItem("museumAudioGuideCompleted");if(e)try{const t=JSON.parse(e);this.completedTracks=new Set(t),console.log("Loaded completed tracks from localStorage:",[...this.completedTracks])}catch(t){console.warn("Failed to load completed tracks:",t),this.completedTracks=new Set}const a=localStorage.getItem("museumAudioGuideDurations");if(a)try{const t=JSON.parse(a);this.tracks.forEach(e=>{t[e.id]&&(e.duration=t[e.id])}),console.log("Loaded track durations from localStorage")}catch(t){console.warn("Failed to load track durations:",t)}}};class i{constructor(t,e){this.audioState=t,this.onProgressClick=e,this.element=null,this.progressFill=null,this.currentTime=null,this.totalTime=null,this.create()}create(){this.element=e.createElement("div","header");const t=this.audioState.getCurrentTrack()||{title:"Loading...",description:"Please wait...",icon:"MG",thumbnail_url:"",thumbnail_initials:"MG"};this.element.innerHTML=`\n            <div class="current-track-header">\n                <div class="track-info">\n                    <div class="current-track-image" id="currentTrackImage">\n                        ${this.renderTrackImage(t)}\n                    </div>\n                    <div class="track-details">\n                        <div class="current-track-title" id="currentTrackTitle">${t.title}</div>\n                        <div class="current-track-subtitle" id="currentTrackSubtitle">${t.description}</div>\n                    </div>\n                </div>\n                \n                <div class="header-progress">\n                    <div class="progress-bar" id="progressBar">\n                        <div class="progress-fill" id="progressFill"></div>\n                    </div>\n                    <div class="time-info">\n                        <span id="currentTime">00:00</span>\n                        <span id="totalTime">00:00</span>\n                    </div>\n                </div>\n            </div>\n        `,this.progressFill=this.element.querySelector("#progressFill"),this.currentTime=this.element.querySelector("#currentTime"),this.totalTime=this.element.querySelector("#totalTime");const a=this.element.querySelector("#currentTrackImage");this.setupImageLoadHandlers(a),this.element.querySelector("#progressBar").addEventListener("click",this.handleProgressClick.bind(this))}handleProgressClick(t){if(this.onProgressClick){const e=t.currentTarget.getBoundingClientRect(),a=(t.clientX-e.left)/e.width;this.onProgressClick(a)}}renderTrackImage(t){return console.log("Rendering track image for:",t.title,"thumbnail_url:",t.thumbnail_url),t.thumbnail_url&&""!==t.thumbnail_url.trim()?`<img class="track-image" src="${t.thumbnail_url}" alt="${t.title}" style="display: none;" />\n                    <div class="fallback-text">${t.thumbnail_initials||t.icon||"MG"}</div>`:`<div class="fallback-text">${t.thumbnail_initials||t.icon||"MG"}</div>`}setupImageLoadHandlers(t){const e=t.querySelector(".track-image"),a=t.querySelector(".fallback-text");e&&a&&(e.onload=()=>{e.style.display="block",a.style.display="none"},e.onerror=()=>{e.style.display="none",a.style.display="flex"},e.complete&&(e.naturalWidth>0?e.onload():e.onerror()))}updateTrack(){const t=this.audioState.getCurrentTrack();if(!t)return;const e=this.element.querySelector("#currentTrackImage");e.innerHTML=this.renderTrackImage(t),this.setupImageLoadHandlers(e),this.element.querySelector("#currentTrackTitle").textContent=t.title,this.element.querySelector("#currentTrackSubtitle").textContent=t.description}updateProgress(t,a){if(a&&a>0){const i=t/a*100;this.progressFill.style.width=i+"%",this.currentTime.textContent=e.formatTime(t),this.totalTime.textContent=e.formatTime(a)}else this.progressFill.style.width="0%",this.currentTime.textContent="00:00",this.totalTime.textContent="00:00"}update(){this.updateTrack()}render(t){t.appendChild(this.element)}}class s{constructor(t,e){this.audioState=t,this.onTrackSelect=e,this.element=null,this.create()}create(){this.element=e.createElement("div","list-container"),this.element.innerHTML='<div class="audio-list" id="audioList"></div>',this.listElement=this.element.querySelector("#audioList"),this.renderTracks()}renderTracks(){this.listElement.innerHTML="",this.audioState.tracks.forEach(t=>{const e=this.createTrackItem(t);this.listElement.appendChild(e)})}createTrackItem(t){const a=e.createElement("div","audio-item");t.id===this.audioState.currentTrack&&a.classList.add("active"),this.audioState.isTrackCompleted(t.id)&&a.classList.add("completed");const i=t.id===this.audioState.currentTrack&&this.audioState.isPlaying?'<div class="playing-indicator playing">♪</div>':"",s=this.audioState.isTrackCompleted(t.id)?'<span class="completion-badge">✓</span>':"";a.innerHTML=`\n            <div class="audio-thumbnail" data-track-id="${t.id}">\n                ${this.renderTrackThumbnail(t)}\n            </div>\n            <div class="audio-info">\n                <div class="audio-title">${t.title}</div>\n                <div class="audio-subtitle">${t.description}</div>\n            </div>\n            <div class="audio-duration">\n                ${i}\n                ${e.formatTime(t.duration)}\n                ${s}\n            </div>\n        `,a.onclick=()=>this.handleTrackSelect(t.id);const o=a.querySelector(".audio-thumbnail");return this.setupThumbnailHandlers(o),a}renderTrackThumbnail(t){return t.thumbnail_url&&""!==t.thumbnail_url.trim()?`<img class="track-thumbnail-image" src="${t.thumbnail_url}" alt="${t.title}" style="display: none;" />\n                    <div class="thumbnail-fallback">${t.thumbnail_initials||t.icon||"MG"}</div>`:`<div class="thumbnail-fallback">${t.thumbnail_initials||t.icon||"MG"}</div>`}setupThumbnailHandlers(t){const e=t.querySelector(".track-thumbnail-image"),a=t.querySelector(".thumbnail-fallback");e&&a&&(e.onload=()=>{e.style.display="block",a.style.display="none"},e.onerror=()=>{e.style.display="none",a.style.display="flex"},e.complete&&(e.naturalWidth>0?e.onload():e.onerror()))}handleTrackSelect(t){this.onTrackSelect&&this.onTrackSelect(t)}updateActiveTrack(){this.listElement.querySelectorAll(".audio-item").forEach(t=>{t.classList.remove("active")});const t=this.listElement.querySelectorAll(".audio-item"),e=this.audioState.currentTrack-1;t[e]&&t[e].classList.add("active")}updatePlayingState(){this.renderTracks()}markTrackCompleted(t){const a=this.listElement.querySelectorAll(".audio-item"),i=t-1;if(a[i]){a[i].classList.add("completed");const t=a[i].querySelector(".audio-duration");if(t&&!t.querySelector(".completion-badge")){const a=e.createElement("span","completion-badge","✓");t.appendChild(a)}}}scrollToActiveTrack(){const t=this.listElement.querySelector(".audio-item.active");t&&t.scrollIntoView({behavior:"smooth",block:"center"})}update(){this.updateActiveTrack(),this.updatePlayingState()}render(t){t.appendChild(this.element)}}class o{constructor(t,e,a){this.audioState=t,this.audioElement=e,this.callbacks=a,this.element=null,this.create(),this.setupEventListeners()}create(){this.element=e.createElement("div","player-controls"),this.element.innerHTML='\n            <div class="media-player">\n                <div class="main-controls">\n                    <button class="control-btn" id="prevBtn">\n                        <span class="material-icons">skip_previous</span>\n                    </button>\n                    \n                    <button class="control-btn play-pause-btn" id="playPauseBtn">\n                        <span class="material-icons" id="playIcon">play_arrow</span>\n                    </button>\n                    \n                    <button class="control-btn" id="nextBtn">\n                        <span class="material-icons">skip_next</span>\n                    </button>\n                </div>\n            </div>\n        ',this.playPauseBtn=this.element.querySelector("#playPauseBtn"),this.playIcon=this.element.querySelector("#playIcon"),this.prevBtn=this.element.querySelector("#prevBtn"),this.nextBtn=this.element.querySelector("#nextBtn")}setupEventListeners(){this.playPauseBtn.addEventListener("click",()=>{this.callbacks.onPlayPause&&this.callbacks.onPlayPause()}),this.prevBtn.addEventListener("click",()=>{this.callbacks.onPrevious&&this.callbacks.onPrevious()}),this.nextBtn.addEventListener("click",()=>{this.callbacks.onNext&&this.callbacks.onNext()})}updatePlayState(t){this.playIcon.textContent=t?"pause":"play_arrow"}setEnabled(t){this.element.querySelectorAll("button").forEach(e=>{e.disabled=!t}),t?this.element.classList.remove("disabled"):this.element.classList.add("disabled")}update(){const t=!this.audioElement.paused;this.updatePlayState(t);const e=null!==this.audioState.getCurrentTrack();this.setEnabled(e)}render(t){t.appendChild(this.element)}}class r{constructor(){this.audioState=new a,this.audioElement=null,this.header=null,this.audioList=null,this.mediaPlayer=null,this.trackListeningProgress=new Map}async init(){this.createAudioElement(),await this.audioState.initializeTracks(),this.createComponents(),this.setupAudioEventListeners(),this.loadCurrentTrack(),this.preloadTrackDurations(),setTimeout(()=>{this.audioState.playlistManager&&(console.log("Re-applying theme after component initialization..."),this.audioState.playlistManager.applyTheme())},500)}createAudioElement(){this.audioElement=document.createElement("audio"),this.audioElement.preload="metadata",document.body.appendChild(this.audioElement)}createComponents(){const t=document.querySelector(".audio-guide");this.header=new i(this.audioState,t=>{this.seekToPercent(t)}),this.header.render(t),this.audioList=new s(this.audioState,t=>{this.selectTrack(t)}),this.audioList.render(t),this.mediaPlayer=new o(this.audioState,this.audioElement,{onPlayPause:()=>this.togglePlayPause(),onPrevious:()=>this.previousTrack(),onNext:()=>this.nextTrack()}),this.mediaPlayer.render(t)}setupAudioEventListeners(){this.audioElement.addEventListener("loadedmetadata",()=>{const t=this.audioState.getCurrentTrack();this.audioState.setDuration(t.id,this.audioElement.duration),this.updateUI()}),this.audioElement.addEventListener("timeupdate",()=>{this.audioState.setCurrentTime(this.audioElement.currentTime),this.updateListeningProgress(),this.updateUI()}),this.audioElement.addEventListener("ended",()=>{this.onTrackEnded()}),this.audioElement.addEventListener("play",()=>{this.audioState.setPlaying(!0),this.updateUI()}),this.audioElement.addEventListener("pause",()=>{this.audioState.setPlaying(!1),this.updateUI()}),this.audioElement.addEventListener("error",t=>{console.error("Audio error:",t),this.audioState.setPlaying(!1),this.updateUI()})}loadCurrentTrack(){const t=this.audioState.getCurrentTrack();t&&(this.audioElement.src=t.url,this.trackListeningProgress.has(t.id)||this.trackListeningProgress.set(t.id,0),this.updateUI())}selectTrack(t){if(this.audioState.currentTrack!==t){const e=!this.audioElement.paused;this.audioState.setCurrentTrack(t),this.trackListeningProgress.has(t)||this.trackListeningProgress.set(t,0),this.loadCurrentTrack(),e&&setTimeout(()=>{this.audioElement.play().catch(t=>{console.error("Auto-play failed:",t)})},100)}}togglePlayPause(){this.audioElement.paused?this.audioElement.play().catch(t=>{console.error("Play failed:",t)}):this.audioElement.pause()}previousTrack(){const t=this.audioState.currentTrack;t>1&&this.selectTrack(t-1)}nextTrack(){const t=this.audioState.currentTrack;t<this.audioState.tracks.length&&this.selectTrack(t+1)}seekToPercent(t){this.audioElement.duration&&(this.audioElement.currentTime=t/100*this.audioElement.duration)}updateListeningProgress(){if(this.audioElement.duration>0&&this.audioElement.currentTime>0){const t=this.audioState.getCurrentTrack(),e=this.audioElement.currentTime/this.audioElement.duration*100;e>(this.trackListeningProgress.get(t.id)||0)&&this.trackListeningProgress.set(t.id,e)}}onTrackEnded(){const t=this.audioState.getCurrentTrack(),e=this.trackListeningProgress.get(t.id)||0;e>=90?(this.audioState.markTrackCompleted(t.id),console.log(`Track ${t.id} marked as completed (${e.toFixed(1)}% listened)`)):console.log(`Track ${t.id} ended but not marked as completed (only ${e.toFixed(1)}% listened)`),this.audioState.currentTrack<this.audioState.tracks.length&&setTimeout(()=>{const t=this.audioState.currentTrack+1;this.audioState.setCurrentTrack(t),this.loadCurrentTrack(),setTimeout(()=>{this.audioElement.play().catch(t=>{console.error("Auto-play failed:",t)})},100)},1e3),this.updateUI()}preloadTrackDurations(){const t=document.createElement("audio");t.preload="metadata";const e=this.audioState.tracks.filter(t=>0===t.duration);if(0===e.length)return void console.log("All tracks already have duration information");console.log(`Preloading duration for ${e.length} tracks`);let a=0;const i=()=>{if(a>=e.length)return void this.updateUI();const s=e[a];t.src=s.url,t.addEventListener("loadedmetadata",()=>{t.duration&&!isNaN(t.duration)&&(this.audioState.setDuration(s.id,t.duration),console.log(`Loaded duration for track ${s.id}: ${t.duration}s`)),a++,setTimeout(i,100)},{once:!0}),t.addEventListener("error",()=>{console.warn(`Failed to load duration for track ${s.id}`),a++,setTimeout(i,100)},{once:!0}),t.load()};i()}updateUI(){this.header&&(this.header.update(),this.header.updateProgress(this.audioElement.currentTime||0,this.audioElement.duration||0)),this.audioList&&this.audioList.update(),this.mediaPlayer&&this.mediaPlayer.update()}}document.addEventListener("DOMContentLoaded",async()=>{const t=new r;await t.init()})})();</script></body></html>
