@@ -1,0 +1,243 @@
+{
+  "timestamp": "2025-07-09T09:16:26.734075",
+  "settings": {
+    "format": "mp3",
+    "bitrate": 192,
+    "sample_rate": 24000,
+    "language": null
+  },
+  "files": [
+    {
+      "input": "tts/en/AIR_BAYU_8_en.wav",
+      "output": "tts_lossless/en/AIR_BAYU_8_en_optimized.mp3",
+      "original_size": 10126650,
+      "optimized_size": 2149292,
+      "reduction": 78.77588343627951,
+      "success": true
+    },
+    {
+      "input": "tts/en/Akasa_-_Celestial_Space_12_en.wav",
+      "output": "tts_lossless/en/Akasa_-_Celestial_Space_12_en_optimized.mp3",
+      "original_size": 13916730,
+      "optimized_size": 2930804,
+      "reduction": 78.94042637889793,
+      "success": true
+    },
+    {
+      "input": "tts/en/Concluding_Reflection_13_en.wav",
+      "output": "tts_lossless/en/Concluding_Reflection_13_en_optimized.mp3",
+      "original_size": 2876730,
+      "optimized_size": 628532,
+      "reduction": 78.15116469046453,
+      "success": true
+    },
+    {
+      "input": "tts/en/Corridor_-_Textile_1_en.wav",
+      "output": "tts_lossless/en/Corridor_-_Textile_1_en_optimized.mp3",
+      "original_size": 4030650,
+      "optimized_size": 860228,
+      "reduction": 78.65783434433652,
+      "success": true
+    },
+    {
+      "input": "tts/en/EARTH_PERTIWI_5_en.wav",
+      "output": "tts_lossless/en/EARTH_PERTIWI_5_en_optimized.mp3",
+      "original_size": 8492730,
+      "optimized_size": 1883660,
+      "reduction": 77.82032397120831,
+      "success": true
+    },
+    {
+      "input": "tts/en/FIRE_TEJA_7_en.wav",
+      "output": "tts_lossless/en/FIRE_TEJA_7_en_optimized.mp3",
+      "original_size": 8776890,
+      "optimized_size": 1893308,
+      "reduction": 78.42848662795136,
+      "success": true
+    },
+    {
+      "input": "tts/en/GUARDIAN_STATUE_4_en.wav",
+      "output": "tts_lossless/en/GUARDIAN_STATUE_4_en_optimized.mp3",
+      "original_size": 5188410,
+      "optimized_size": 1100948,
+      "reduction": 78.78062836206082,
+      "success": true
+    },
+    {
+      "input": "tts/en/Interior_Curved_Wall_-_Textile_3_en.wav",
+      "output": "tts_lossless/en/Interior_Curved_Wall_-_Textile_3_en_optimized.mp3",
+      "original_size": 7187130,
+      "optimized_size": 1581308,
+      "reduction": 77.99806042189303,
+      "success": true
+    },
+    {
+      "input": "tts/en/PALACE_AND_TEMPLE_DOORS_2_en.wav",
+      "output": "tts_lossless/en/PALACE_AND_TEMPLE_DOORS_2_en_optimized.mp3",
+      "original_size": 7519290,
+      "optimized_size": 1574276,
+      "reduction": 79.06350200617347,
+      "success": true
+    },
+    {
+      "input": "tts/en/Panca_Maha_Bhuta_The_Five_Great_Elements_0_en.wav",
+      "output": "tts_lossless/en/Panca_Maha_Bhuta_The_Five_Great_Elements_0_en_optimized.mp3",
+      "original_size": 5336250,
+      "optimized_size": 1121348,
+      "reduction": 78.9862169126259,
+      "success": true
+    },
+    {
+      "input": "tts/en/Precious_Treasures_-_Bali_Wooden_Statues_11_en.wav",
+      "output": "tts_lossless/en/Precious_Treasures_-_Bali_Wooden_Statues_11_en_optimized.mp3",
+      "original_size": 9005370,
+      "optimized_size": 1927988,
+      "reduction": 78.59068533552758,
+      "success": true
+    },
+    {
+      "input": "tts/en/Precious_Treasures_-_Jewelry_10_en.wav",
+      "output": "tts_lossless/en/Precious_Treasures_-_Jewelry_10_en_optimized.mp3",
+      "original_size": 4297530,
+      "optimized_size": 893756,
+      "reduction": 79.20303057802971,
+      "success": true
+    },
+    {
+      "input": "tts/en/Precious_Treasures_-_Shadow_Puppets_9_en.wav",
+      "output": "tts_lossless/en/Precious_Treasures_-_Shadow_Puppets_9_en_optimized.mp3",
+      "original_size": 6058170,
+      "optimized_size": 1333004,
+      "reduction": 77.99658972924168,
+      "success": true
+    },
+    {
+      "input": "tts/en/WATER_APAH_6_en.wav",
+      "output": "tts_lossless/en/WATER_APAH_6_en_optimized.mp3",
+      "original_size": 6580410,
+      "optimized_size": 1376804,
+      "reduction": 79.07723075005964,
+      "success": true
+    },
+    {
+      "input": "tts/ja/AIR_BAYU_8_ja.wav",
+      "output": "tts_lossless/ja/AIR_BAYU_8_ja_optimized.mp3",
+      "original_size": 13043130,
+      "optimized_size": 2775644,
+      "reduction": 78.7194944771692,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Akasa_-_Celestial_Space_12_ja.wav",
+      "output": "tts_lossless/ja/Akasa_-_Celestial_Space_12_ja_optimized.mp3",
+      "original_size": 15180090,
+      "optimized_size": 3106748,
+      "reduction": 79.53406073350027,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Concluding_Reflection_13_ja.wav",
+      "output": "tts_lossless/ja/Concluding_Reflection_13_ja_optimized.mp3",
+      "original_size": 4165050,
+      "optimized_size": 848468,
+      "reduction": 79.6288639992317,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Corridor_-_Textile_1_ja.wav",
+      "output": "tts_lossless/ja/Corridor_-_Textile_1_ja_optimized.mp3",
+      "original_size": 5023290,
+      "optimized_size": 1067156,
+      "reduction": 78.75583531908372,
+      "success": true
+    },
+    {
+      "input": "tts/ja/EARTH_PERTIWI_5_ja.wav",
+      "output": "tts_lossless/ja/EARTH_PERTIWI_5_ja_optimized.mp3",
+      "original_size": 9955770,
+      "optimized_size": 2175500,
+      "reduction": 78.14835015272551,
+      "success": true
+    },
+    {
+      "input": "tts/ja/FIRE_TEJA_7_ja.wav",
+      "output": "tts_lossless/ja/FIRE_TEJA_7_ja_optimized.mp3",
+      "original_size": 10140090,
+      "optimized_size": 2104268,
+      "reduction": 79.24803428766411,
+      "success": true
+    },
+    {
+      "input": "tts/ja/GUARDIAN_STATUE_4_ja.wav",
+      "output": "tts_lossless/ja/GUARDIAN_STATUE_4_ja_optimized.mp3",
+      "original_size": 6386490,
+      "optimized_size": 1329692,
+      "reduction": 79.1796119621263,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Interior_Curved_Wall_-_Textile_3_ja.wav",
+      "output": "tts_lossless/ja/Interior_Curved_Wall_-_Textile_3_ja_optimized.mp3",
+      "original_size": 8702010,
+      "optimized_size": 1779020,
+      "reduction": 79.55621747159564,
+      "success": true
+    },
+    {
+      "input": "tts/ja/PALACE_AND_TEMPLE_DOORS_2_ja.wav",
+      "output": "tts_lossless/ja/PALACE_AND_TEMPLE_DOORS_2_ja_optimized.mp3",
+      "original_size": 9498810,
+      "optimized_size": 1989020,
+      "reduction": 79.06032439852993,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Panca_Maha_Bhuta_The_Five_Great_Elements_0_ja.wav",
+      "output": "tts_lossless/ja/Panca_Maha_Bhuta_The_Five_Great_Elements_0_ja_optimized.mp3",
+      "original_size": 5674170,
+      "optimized_size": 1127756,
+      "reduction": 80.12474071097623,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Precious_Treasures_-_Bali_Wooden_Statues_11_ja.wav",
+      "output": "tts_lossless/ja/Precious_Treasures_-_Bali_Wooden_Statues_11_ja_optimized.mp3",
+      "original_size": 11205690,
+      "optimized_size": 2405852,
+      "reduction": 78.53008605449553,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Precious_Treasures_-_Jewelry_10_ja.wav",
+      "output": "tts_lossless/ja/Precious_Treasures_-_Jewelry_10_ja_optimized.mp3",
+      "original_size": 5528250,
+      "optimized_size": 1129988,
+      "reduction": 79.5597521819744,
+      "success": true
+    },
+    {
+      "input": "tts/ja/Precious_Treasures_-_Shadow_Puppets_9_ja.wav",
+      "output": "tts_lossless/ja/Precious_Treasures_-_Shadow_Puppets_9_ja_optimized.mp3",
+      "original_size": 7196730,
+      "optimized_size": 1542044,
+      "reduction": 78.57299078887216,
+      "success": true
+    },
+    {
+      "input": "tts/ja/WATER_APAH_6_ja.wav",
+      "output": "tts_lossless/ja/WATER_APAH_6_ja_optimized.mp3",
+      "original_size": 7521210,
+      "optimized_size": 1607252,
+      "reduction": 78.63040654362796,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_files": 28,
+    "successful": 28,
+    "failed": 0,
+    "total_original_size": 218613720,
+    "total_optimized_size": 46243664,
+    "total_reduction": 78.84686102958223
+  }
+}
